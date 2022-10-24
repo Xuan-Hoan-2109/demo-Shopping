@@ -7,10 +7,13 @@ html{
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     cursor:context-menu; 
     width: 100%;
     font-size: 1.4rem;
+    box-sizing: border-box;
+
+}
+*{
     box-sizing: border-box;
 }
 :root{
@@ -134,27 +137,31 @@ input {
 }
 .container{
     width: 100%;
-    height: 724px;
     z-index: 0;
     background-color:#f8f8f8 ;
 }
 .container img {
     width: 50%;
+    display: block;
     margin: 0 0 0 9%;
 }
 .container__text{
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 51.3%;
     display: flex;
+    justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 35rem;
     transform: translate(-50%,-50%);
     color: #575153;
 }
-.container__text span {
-    margin: 12rem;
+.container__text span:nth-child(2){
+    width: 47%;
+    display: flex;
+    justify-content: center;
 }
 .button {
     position: absolute;
@@ -365,7 +372,7 @@ input {
 }
 
 .item--bigletters {
-   padding-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 .dropdown__item--text {
     text-transform: none;
@@ -376,69 +383,148 @@ input {
     padding-top: 2.5rem;
 }
 .item {
-    width: 177rem;
+    width: 85%;
     margin: 0 auto;
     border-top: 1px solid;
     border-bottom: 1px solid;
     padding: 35px 0px 30px 0px;
 }
+.item__text{
+    height: 9rem;
+    display:flex;
+    align-items: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.text{
+    margin-right: 5.5rem;
+}
+.text p:hover {
+    color: #00c8c8;
+    cursor: pointer;
+}
 .item__img {
-    width: 177rem;
     display:flex;
     justify-content: center;
     cursor: pointer;
 }
 .item__celect--one, .item__celect--two {
-    max-width: 87rem;
+    width: 50%;
     padding: 0;
 }
 .item__celect--one {
-    margin-right: 1.5rem;
+    margin-right: 0.75em;
 }
  .item__celect--two {
     margin-left: 1.5rem;
 }
 .celect__cover--img{
     display: block;
-    width: 87rem;
-    height: 50rem;
+    width: 100%;
+}
+.select__envelop__img--small{
+    display: flex;
 }
 .celect--img--small {
-    width: 42rem;
-    height: 50rem;
+    width: 50%;
     float: left;
     position: relative;
     transition: .5s ease;
     z-index: 1;
 }
 .celect--img--small:nth-child(1) {
-    margin-right: 3rem;
+    margin-right: 1.5em;
+}
+.celect--img--small img {
+    width: 100%;
+    display: block;
+}
+.icon-container {
+    width: 100%;
+    height: 15rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    opacity: 1;
+}
+.icon-container--text {
+    text-align: center;
+    font-size: 0.7em;
+    margin: 1rem;
+}
+.icon-container--text:nth-child(1) {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    margin-top: 21px;
+}
+.icon-container--text:nth-child(2) {
+    margin: 6% 0 6% 0;
+}
+.icon-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.icon {   
+    float: left;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid transparent;
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(62, 57, 57);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    line-height: 0;
+}
+.icon:hover {
+    background-color: #00c8c8;
+    cursor: pointer;
+}
+.icon:nth-child(2) {
+    margin: 0 15px 0 15px;
+}
+.icon:nth-child(2),
+.icon:nth-child(3) {
+    font-size: 0.7em;
 }
 .celect--img--great {
-    width: 87rem;
-    height: 70.5rem;
-    margin-bottom: 3rem;
+    width: 100%;
+    margin-bottom: 1.5em;
     position: relative;
     transition: .5s ease;
     z-index: 2;
 }
 .celect--img--great:nth-child(2) {
-   margin-top: 3rem ;
+   margin-top: 1.5em ;
    z-index: 0;
 }
 .celect--img--great:hover {
     box-shadow: 0px 0px 20px 5px #656565;
 }
-.celect--img--small img {
-    width: 42rem;
-    height: 50rem;
-}
 .celect--img--great img {
-    width: 87rem;
-    height: 70.5rem;
+    width: 100%;
+    display: block;
 }
 .icon-container--two {
-    width: 87rem;
+    width: 100%;
     height: 15rem;
     background-color: white; 
     position: absolute;
@@ -465,7 +551,7 @@ input {
 .icon-container--text--two:nth-child(1) {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 2.3rem;
+    font-size: 1.7rem;
 }
 .icon-wrap--two {
     width: 100%;
@@ -504,73 +590,8 @@ input {
     opacity: 1;
     box-shadow: 0 0px 20px 5px #656565;
 }
-.icon-container {
-    width: 42rem;
-    height: 15rem;
-    background-color: white;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    z-index: -1;
-    display: block;
-    margin: 0;
-    padding: 0;
-    color: #444;
-    font-size: 1.8rem;
-    text-decoration: none;
-    text-align: center;
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    opacity: 1;
-}
 
 
-.icon-container--text {
-    text-align: center;
-    font-size: 17.5px;
-    margin: 1rem;
-}
-.icon-container--text:nth-child(1) {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 15.5px;
-    margin-top: 21px;
-}
-.icon-container--text:nth-child(2) {
-    margin-top: 1.5rem;
-}
-.icon-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.icon {   
-    float: left;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid transparent;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: rgb(62, 57, 57);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.2s linear;
-    line-height: 0;
-}
-.icon:hover {
-    background-color: #00c8c8;
-    cursor: pointer;
-}
-.icon:nth-child(2) {
-    font-size: 1.8rem;
-    margin: 0 15px 0 15px;
-}
-.icon:nth-child(3) {
-    font-size: 1.8rem;
-}
 .celect--img--small:hover {
     box-shadow: 0 0px 20px 5px #656565;
 
@@ -581,21 +602,6 @@ input {
     opacity: 1;
     box-shadow: 0 0px 20px 5px #656565;
     
-}
-.item__text{
-    height: 9rem;
-    display:flex;
-    align-items: center;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.text{
-    margin-right: 5.5rem;
-}
-.text p:hover {
-    color: #00c8c8;
-    cursor: pointer;
 }
 
  
